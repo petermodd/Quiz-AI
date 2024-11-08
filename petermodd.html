@@ -1,26 +1,25 @@
 <!DOCTYPE html>
-<html lang="sv"> <!-- Declares the document as HTML5 and sets the language to Swedish -->
+<html lang="sv">
 <head>
-    <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 for special characters -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsive design on various devices -->
-    <title>Peter Modd - Personlig Webbplat</title> <!-- Title of the webpage -->
-    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS for styling -->
-    <link rel="icon" type="image/png" href="favicon.png"> <!-- Favicon for the webpage in PNG format -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome library for icons -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peter Modd - Personlig Webbplat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="container header-container">
             <div class="social-icons">
-                <!-- Social media icons linking to Instagram and YouTube profiles, opening in a new tab -->
                 <a href="https://instagram.com/yourusername" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="https://youtube.com/yourusername" target="_blank"><i class="fab fa-youtube"></i></a>
             </div>
-            <h1><span class="hover-effect">Quiz-sida</span></h1> <!-- Main heading with hover effect -->
-            <p class="subtitle">Peter Modd</p> <!-- Subtitle with the name -->
+            <h1><span class="hover-effect">Quiz-sida</span></h1>
+            <p class="subtitle">Peter Modd</p>
             <nav>
                 <ul>
-                    <li><a href="petermodd.html" class="active">Quiz</a></li> <!-- Navigation link to Quiz page -->
+                    <li><a href="petermodd.html" class="active">Quiz</a></li>
                 </ul>
             </nav>
         </div>
@@ -28,32 +27,27 @@
     <main>
         <section id="home">
             <div class="container home-container">
-                <h2>Välkommen till min Quiz</h2> <!-- Welcome message for the quiz section -->
+                <h2>Välkommen till min Quiz</h2>
                 <article>
-                    <form id="quizForm" novalidate> <!-- Quiz form with novalidate attribute to control validation -->
-                        <h3>Personal information:</h3> <!-- Personal information section -->
+                    <form id="quizForm" novalidate>
+                        <h3>Personal information:</h3>
                         <div>
-                            <label for="firstName">First Name* <span class="required-indicator">*</span></label>
-                            <!-- Input for first name with pattern restriction to letters only -->
+                            <label for="firstName">First Name<span class="required-indicator">*</span></label>
                             <input type="text" id="firstName" required pattern="[A-Za-z]+" title="Only letters are allowed">
                             <div class="invalid-feedback">First name is required and must contain only letters.</div>
                         </div>
                         <div>
-                            <label for="lastName">Last Name* <span class="required-indicator">*</span></label>
-                            <!-- Input for last name with similar pattern restriction -->
+                            <label for="lastName">Last Name<span class="required-indicator">*</span></label>
                             <input type="text" id="lastName" required pattern="[A-Za-z]+" title="Only letters are allowed">
                             <div class="invalid-feedback">Last name is required and must contain only letters.</div>
                         </div>
                         <div>
-                            <label for="email">Email* <span class="required-indicator">*</span></label>
-                            <!-- Email input field with validation -->
+                            <label for="email">Email<span class="required-indicator">*</span></label>
                             <input type="email" id="email" required>
                             <div class="invalid-feedback">Please enter a valid email.</div>
                         </div>
-                        
-                        <h3>Questions:</h3> <!-- Questions section of the form -->
+                        <h3>Questions:</h3>
                         <div>
-                            <!-- Question 1 with radio buttons to select an answer -->
                             <p>1. Which of the following is a primary application of AI? <span class="required-indicator">*</span></p>
                             <div id="aiApplication">
                                 <input type="radio" id="dataAnalysis" name="aiApplication" value="Data Analysis" required>
@@ -66,20 +60,18 @@
                             <div class="invalid-feedback">Please select an AI application.</div>
                         </div>
                         <div>
-                            <!-- Question 2 with radio buttons to select an answer -->
                             <p>2. Which AI technology simulates human conversation through voice commands or text chats? <span class="required-indicator">*</span></p>
                             <div id="aiTechnology">
                                 <input type="radio" id="naturalLanguageProcessing" name="aiTechnology" value="Natural Language Processing" required>
                                 <label for="naturalLanguageProcessing">Natural Language Processing</label><br>
-                                <input type="radio" id="roboticProcessAutomation" name="aiTechnology" value="Robotic Process Automation">
+                                <input type="radio" id="roboticProcessAutomation" name="aiTechnology" value="Robotic Process Automation" required>
                                 <label for="roboticProcessAutomation">Robotic Process Automation</label><br>
-                                <input type="radio" id="virtualReality" name="aiTechnology" value="Virtual Reality">
+                                <input type="radio" id="virtualReality" name="aiTechnology" value="Virtual Reality" required>
                                 <label for="virtualReality">Virtual Reality</label>
                             </div>
                             <div class="invalid-feedback">Please select an AI technology.</div>
                         </div>
                         <div>
-                            <!-- Question 3 with checkboxes to allow multiple selections -->
                             <p>3. What impact do you believe AI will have on future job markets? <span class="required-indicator">*</span></p>
                             <input type="checkbox" id="jobCreation" name="aiImpact" value="Job Creation" required>
                             <label for="jobCreation">Job Creation</label><br>
@@ -91,23 +83,24 @@
                             <label for="increasedEfficiency">Increased Efficiency</label>
                         </div>
                         <div>
-                            <!-- Question 4 with radio buttons for a single selection -->
-                            <p>4. Who is known as the father of Artificial Intelligence?</p>
-                            <input type="radio" id="johnMccarthy" name="aiFather" value="John McCarthy">
-                            <label for="johnMccarthy">John McCarthy</label><br>
-                            <input type="radio" id="geoffreyHinton" name="aiFather" value="Geoffrey Hinton">
-                            <label for="geoffreyHinton">Geoffrey Hinton</label><br>
-                            <input type="radio" id="demisHassabis" name="aiFather" value="Demis Hassabis">
-                            <label for="demisHassabis">Demis Hassabis</label>
+                            <p>4. Who is known as the father of Artificial Intelligence? <span class="required-indicator">*</span></p>
+                            <div id="aiFather">
+                                <input type="radio" id="johnMccarthy" name="aiFather" value="John McCarthy" required>
+                                <label for="johnMccarthy">John McCarthy</label><br>
+                                <input type="radio" id="geoffreyHinton" name="aiFather" value="Geoffrey Hinton">
+                                <label for="geoffreyHinton">Geoffrey Hinton</label><br>
+                                <input type="radio" id="demisHassabis" name="aiFather" value="Demis Hassabis">
+                                <label for="demisHassabis">Demis Hassabis</label>
+                            </div>
+                            <div class="invalid-feedback">Please select a response.</div>
                         </div>
                         <div>
-                            <!-- Question 5 with a text area for open-ended response -->
                             <p>5. In your opinion, what is the most significant ethical concern regarding AI? (Open-ended)</p>
                             <textarea id="aiEthics" name="aiEthics"></textarea>
                         </div>
-                        <button type="submit">Submit</button> <!-- Submit button for form submission -->
+                        <button type="submit">Submit</button>
                     </form>
-                    <div id="quizResult"></div> <!-- Placeholder for quiz result output -->
+                    <div id="quizResult"></div>
                 </article>
             </div>
         </section>
@@ -117,12 +110,12 @@
             <p>© 2024 Peter Modd. Alla rättigheter förbehållna.
                 <span class="social-icons-inline">
                     <a href="https://instagram.com/yourusername" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://youtube.com/yourusername" target="_blank"><i the="fab fa-youtube"></i></a>
+                    <a href="https://youtube.com/yourusername" target="_blank"><i class="fab fa-youtube"></i></a>
                 </span>
-                Kontakt: <a href="mailto:petermodd@gmail.com">petermodd@gmail.com</a> <!-- Contact email link -->
+                Kontakt: <a href="mailto:petermodd@gmail.com">petermodd@gmail.com</a>
             </p>
         </div>
     </footer>
-    <script src="petermodd.js"></script> <!-- External JavaScript file -->
+    <script src="petermodd.js"></script>
 </body>
 </html>
